@@ -1,0 +1,27 @@
+<h1>Your total words are {{ wordcount }}</h1>
+<h2>Your total characters are {{ total_characters }}</h2>
+
+<h2>Your text: </h2>
+{{fulltext}}
+<br/>
+<br/>
+
+<h2>Your score: </h2>
+{% for word, counttotal in sortedWords  %}
+
+{{ word }}: {{ counttotal }}
+<br/>
+
+
+{% endfor %}
+<br/>
+
+{% if just_one %}
+<h1>Your most repeated word is: Nothing</h1>
+{% else %}
+<h1>Your most repeated word is: <strong>{{most_rep_word}}</strong></h1>
+{% endif %}
+
+<form action="{% url 'home' %}">
+    <input type="submit", value="Go back?">
+</form>

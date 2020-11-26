@@ -1,0 +1,10 @@
+<h1>WORD COUNTER</h1> 
+<h3>You can't leave the text area empty!</h3>
+
+<form action="{% url 'count' %}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br/>
+    <input type="submit" value="Count!" />
+</form>
+
+<a href="{% url 'about' %}">About</a>
